@@ -27,11 +27,11 @@ public class NegativatedNameImpl implements IPointCalc {
 
     @Override
     public int calc(Proposal proposal) {
-        String userName = proposal.getUser().getName().toUpperCase();
+        String userName = proposal.getUser().getName() + " " + proposal.getUser().getLastName();
         log.debug("Checking negativated name status for user: {}", userName);
 
         if (isNameNegativated()) {
-            String errorMessage = String.format(Messages.NEGATIVATED_NAME, userName);
+            String errorMessage = Messages.NEGATIVATED_NAME.formatted(userName);
             log.info("User {} has a negativated credit status", userName);
             throw new StrategyException(errorMessage);
         }
@@ -43,7 +43,7 @@ public class NegativatedNameImpl implements IPointCalc {
     /**
      * Simulates checking if a name is on a negative credit list. In a real
      * implementation, this would call an external credit check service.
-     * 
+     *
      * @return true if the name is negativated, false otherwise
      */
     protected boolean isNameNegativated() {

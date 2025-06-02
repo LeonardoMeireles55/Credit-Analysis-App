@@ -18,7 +18,7 @@ public class UserMapper {
                 .name(entity.getName())
                 .lastName(entity.getLastName())
                 .cpf(entity.getCpf())
-                .tellPhone(entity.getTellPhone())
+                .phoneNumber(entity.getPhoneNumber())
                 .financialIncome(entity.getFinancialIncome())
                 .build();
     }
@@ -33,7 +33,7 @@ public class UserMapper {
                 .name(dto.getName())
                 .lastName(dto.getLastName())
                 .cpf(dto.getCpf())
-                .tellPhone(dto.getTellPhone())
+                .phoneNumber(dto.getPhoneNumber())
                 .financialIncome(dto.getFinancialIncome())
                 .build();
     }

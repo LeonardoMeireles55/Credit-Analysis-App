@@ -27,7 +27,7 @@ public class CreditAnalysisService {
     @Value("${rabbitmq.completed-exchange.exchange}")
     private String exchangePropostaConcluida;
 
-    @Value("${credit.analysis.approval.threshold:350}")
+    @Value("${credit.analysis.approval.threshold:250}")
     private int approvalThreshold;
 
     public void analysis(ProposalDTO proposalDTO) {
@@ -62,6 +62,6 @@ public class CreditAnalysisService {
 
     private String formatObservation(boolean approved, Proposal proposal) {
         String template = approved ? Messages.APPROVED_NAME : Messages.NOT_APPROVED_NAME;
-        return String.format(template, proposal.getUser().getName().toUpperCase());
+        return String.format(template, proposal.getUser().getName() + " " + proposal.getUser().getLastName());
     }
 }

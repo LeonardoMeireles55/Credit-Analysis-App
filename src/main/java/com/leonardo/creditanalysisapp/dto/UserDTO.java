@@ -24,7 +24,7 @@ public class UserDTO {
     @NotBlank(message = "CPF is required")
     private String cpf;
 
-    private String tellPhone;
+    private String phoneNumber;
 
     @NotNull(message = "Financial income is required")
     @Positive(message = "Financial income must be positive")

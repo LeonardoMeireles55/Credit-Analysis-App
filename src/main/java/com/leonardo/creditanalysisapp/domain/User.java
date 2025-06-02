@@ -16,6 +16,6 @@ public class User {
     private String name;
     private String lastName;
     private String cpf;
-    private String tellPhone;
+    private String phoneNumber;
     private Double financialIncome;
 }

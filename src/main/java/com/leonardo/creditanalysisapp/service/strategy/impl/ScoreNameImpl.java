@@ -15,7 +15,8 @@ import lombok.RequiredArgsConstructor;
 @Component
 @RequiredArgsConstructor
 public class ScoreNameImpl implements IPointCalc {
-    private final Random random;
+
+    Random random = new Random();
 
     @Order(3)
     @Override
@@ -25,7 +26,8 @@ public class ScoreNameImpl implements IPointCalc {
 
         if (score < 200) {
             throw new StrategyException(
-                    String.format(Messages.LOW_SCORE_NAME, proposal.getUser().getName().toUpperCase()));
+                    String.format(Messages.LOW_SCORE_NAME,
+                            proposal.getUser().getName() + " " + proposal.getUser().getLastName()));
         }
 
         if (score <= 400) {

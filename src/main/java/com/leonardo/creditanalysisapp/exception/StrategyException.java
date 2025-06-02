@@ -1,11 +1,14 @@
 package com.leonardo.creditanalysisapp.exception;
 
+import java.io.Serial;
+
 /**
  * Exception thrown when a credit analysis strategy encounters an error that
  * should disqualify a proposal.
  */
 public class StrategyException extends RuntimeException {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private final String strategyName;
@@ -57,7 +60,7 @@ public class StrategyException extends RuntimeException {
 
     /**
      * Gets the name of the strategy that threw this exception
-     * 
+     *
      * @return The strategy name
      */
     public String getStrategyName() {

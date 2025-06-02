@@ -7,12 +7,10 @@ import com.leonardo.creditanalysisapp.service.strategy.IPointCalc;
 
 import org.springframework.stereotype.Component;
 
-import lombok.RequiredArgsConstructor;
-
 @Component
-@RequiredArgsConstructor
 public class OtherLoansImpl implements IPointCalc {
-    private final Random random;
+
+    Random random = new Random();
 
     @Override
     public int calc(Proposal proposal) {
