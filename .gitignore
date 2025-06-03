@@ -1,4 +1,11 @@
+# Existing entries
 HELP.md
+log/
+lab.log
+*.log
+*.7z
+*.gz
+*.env
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -30,4 +37,38 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
-.vscode/
+.vscode/launch.json
+.env
+package-lock.json
+package.json
+
+### Additional Spring Boot ###
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+/analytics
+/users
+/laboratories
+
+### System Files ###
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+### Logs ###
+logs/
+*.tmp
+*.temp
+
+### Maven ###
+.mvn/*
